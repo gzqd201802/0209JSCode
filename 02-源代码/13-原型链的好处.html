@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        // Person 构造函数
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        Person.prototype.run = function () { 
+            console.log(`${this.name}能跑。`);
+        }
+
+        Object.prototype.sayHi = function () { 
+            console.log(`A:是个对象，现在都能说666`);
+        }
+
+        Person.prototype.sayHi = function () { 
+            console.log(`B:Person说话`);
+        }
+
+        // 如果再写 sayHi 就覆盖掉原本的
+        // Person.prototype.sayHi = 11;
+
+        // p1 实例对象
+        const p1 = new Person('小明',19);
+
+        console.log(p1);
+
+        p1.run();
+
+        p1.sayHi();      // ???
+        
+
+Person.prototype
+    </script>
+</body>
+</html>
