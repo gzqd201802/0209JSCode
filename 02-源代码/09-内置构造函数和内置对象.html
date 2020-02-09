@@ -16,11 +16,16 @@
 
         // 需要 new 的这些对象叫实例对象
         const arr = new Array();
-
+        console.log(arr);
+        
         // 内置对象 - 静态对象 - 直接用，不需要 new
         console.log(Math);
         console.log(typeof Math);       // object
+
+        console.log(Math.prototype);    // undefined
         
+        // 注意：Math 对象是一个固有的对象，无需创建它，直接把 Math 作为对象使用就可以调用其所有属性和方法。
+        //      这是它与 Date,String 对象的区别。
 
     </script>
 </body>

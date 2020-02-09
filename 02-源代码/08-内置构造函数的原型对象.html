@@ -17,13 +17,17 @@
         // ---------- 特殊情况 --------------
         // Function.prototype  的原型对象比较特别，不是指向一个原型对象而已指向一个函数
         console.log(`Function`, Function.prototype);  // 函数ƒ () { [native code] }
+        
+        // Function.prototype 是函数，需要用 dir 输出才能看到结果
+        console.dir(Function.prototype);
 
 
+        // 原型对象的 constructor 指向构造函数
         // console.log(`Array`,Array.prototype.constructor === Array);  // true
         // console.log(`Date`,Date.prototype.constructor === Date);// true
         // console.log(`String`,String.prototype.constructor === String);// true
         // console.log(`Number`,Number.prototype.constructor === Number);// true
-        // console.log(`Function`, Function.prototype.constructor === Function);  // true
+        // console.log(`Function`, Function.prototype.constructor === Function); // true
         
 
     </script>
