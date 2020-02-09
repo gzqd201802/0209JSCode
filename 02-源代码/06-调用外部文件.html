@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 外部文件引入，外部文件给 Array.prototype 添加了 getMax 方法-->
+    <script src="./js/utils.js"></script>
+</head>
+
+<body>
+    <script>
+        
+        let arr = [111, 22, 33, 44];   
+        // JS 底层就是 let arr = new Array(111, 22, 33, 44);
+        let arr2 = [111, 11122,22233,3344];
+
+        console.log(arr.getMax());
+        console.log(arr2.getMax());
+
+        let author = 66;
+        console.log(author);
+
+        // getMax(arr)
+
+
+    </script>
+</body>
+
+</html>
