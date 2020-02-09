@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // 需求：所有数组实例都能调用求最大值的方法
+        //   解决方法：在数组原型对象上添加该方法
+
+        let arr = new Array(11, 22, 33, 44);
+        let arr2 = new Array(111, 222, 333, 99);
+
+
+        Array.prototype.getMax = function () {
+            // 需求：调用后返回最大值
+            // 假设索引值为 0 的数最大
+            let max = this[0];
+            // 从索引值 1 开始比较，直到最后
+            for (let i = 1; i < this.length; i++) {
+                if (max < this[i]) {
+                    max = this[i];
+                }
+            }
+            return max;
+        }
+
+        // this 口诀：谁调用 this 就指向谁
+
+        console.log(Array.prototype);
+
+        // arr 调用 getMax()，所以函数内部的 this 就指向 arr
+        console.log(`arr数组最大值`, arr.getMax());
+
+        console.log(`arr2数组最大值`, arr2.getMax());
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

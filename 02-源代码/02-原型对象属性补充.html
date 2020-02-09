@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        // 在原型对象上添加方法
+        Person.prototype.run = function(){
+            console.log(`${this.name}能跑。`);
+        }
+
+        // 在原型对象上也可以添加属性 - !!但是不推荐这么做
+        Person.prototype.xxxx = 6666;
+        
+        // console.dir(Person);
+        console.log(Person.prototype);
+
+        // 作用： 创建的实例对象可以直接访问原型对象上的任意成员!!
+
+        const p1 = new Person('小红',18);
+        const p2 = new Person('小白',18);
+
+        // 实例对象 p1,   run 是原型对象上的成员
+        p1.run();
+        console.log(p1.xxxx);
+
+
+        p2.run();
+        console.log(p2.xxxx);
+        
+
+        
+
+
+    </script>
+</body>
+</html>

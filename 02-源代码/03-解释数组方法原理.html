@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Array 就是JS内置的构造函数，专门用于创建数组 
+        let arr1 = new Array();
+        let arr2 = [];          // [] 的底层就是调用了  new Array() 创建数组
+
+
+        // 打印 数组构造函数的原型
+        console.log(Array.prototype);
+
+
+        arr1.push(111);
+
+
+        // 为什么每个数组都能调用 push 方法？
+        //     答：因为在数组的原型对象上有 push 方法。创建的实例对象可以直接访问原型对象上的任意成员!!
+        
+
+
+    </script>
+</body>
+</html>
