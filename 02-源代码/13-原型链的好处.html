@@ -18,14 +18,15 @@
         Person.prototype.run = function () { 
             console.log(`${this.name}能跑。`);
         }
-
-        Object.prototype.sayHi = function () { 
-            console.log(`A:是个对象，现在都能说666`);
-        }
-
+        
         Person.prototype.sayHi = function () { 
             console.log(`B:Person说话`);
         }
+
+        Object.prototype.sayHi = function () {
+            console.log(`A:是个对象，现在都能说666`);
+        }
+
 
         // 如果再写 sayHi 就覆盖掉原本的
         // Person.prototype.sayHi = 11;
